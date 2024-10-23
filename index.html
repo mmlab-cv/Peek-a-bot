@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Peek-a-bot: learning through vision in Unreal Engine.">
+  <meta name="keywords" content="Peek-a-bot, Reinforcement Learning, Pedestrian Dynamics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peek-a-bot</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PMXG52KP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'GTM-PMXG52KP');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="http://mmlabsites.disi.unitn.it/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/mmlab-cv/">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Peek-a-bot: learning through vision in Unreal Engine</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/mmlab-cv/">Daniele Della Pietra</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=r8BzAfcAAAAJ&hl=en">Nicola Garau</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=mR1GK28AAAAJ&hl=en">Nicola Conci</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?hl=en&user=Qk5Ni_IAAAAJ">Fabrizio Granelli</a><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Trento,</span>
+            <span class="author-block"><sup>2</sup>CNIT</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="static/assets/PeekABot.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/mmlab-cv/Peek-a-bot"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code and Data</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png"
+            alt="Teaser image."/>
+      <h2 class="subtitle has-text-centered">
+        <p>We present <i>Peek-a-bot</i>, a hybrid DL-RL framework that allows the training of reinforcement learning agents only through vision observations and fully in-engine. We (<b>a</b>) build arbitrarily complex and photorealistic environments for agents to navigate. Each agent (<b>b</b>) perceives the world only through its vision. <i>No other information is given at any time to any of the agents, including goal positions or distance information</i>. We (<b>c</b>) extract visual features in-engine from a pre-trained ONNX backbone and (<b>d</b>) use them as input to the PPO algorithm to optimize a set of given rewards (<b>e</b>). Every step is designed to run in real-time inside Unreal Engine 5, making it possible to train agents specifically for video games and complex simulations.</p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Humans learn to navigate and interact with their surroundings through their senses, particularly vision. Ego-vision has lately become a significant focus in computer vision, enabling neural networks to learn from first-person data effectively, as we humans do. Supervised or self-supervised learning of depth, object location, and segmentation maps through deep networks has shown considerable success in recent years.</p>
+
+          <p>On the other hand, reinforcement learning (RL) has been focusing on learning from different kinds of sensing data, such as rays, collisions, distances, and other types of observations. In this paper, we merge the two approaches, providing a complete pipeline to train reinforcement learning agents inside virtual environments, only relying on vision, eliminating the need for traditional RL observations.</p>
+
+          <p>We demonstrate that visual stimuli, if encoded by a carefully designed vision encoder, can provide informative observations, thus replacing ray-based approaches and drastically simplifying the reward shaping typical of classical RL. Our method is fully implemented inside Unreal Engine 5, from the real-time inference of visual features to the online training of the agents' behavior using the Proximal Policy Optimization (PPO) algorithm.</p>
+
+          <p>To the best of our knowledge, this is the first in-engine solution targeting video games and simulation, enabling game developers to easily train vision-based RL agents without writing a single line of code.</p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Training. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Architecture</h2>
+          <img src="./static/images/architecture.png"
+                alt="Architecture."/>
+                <p><i>Peek-a-bot</i> architecture. Left to right: the environment is sensed through visual observations (RGB images), which are fed to a backbone neural network chosen by the user. If the selected backbone is pre-trained for an object detection task (optional), the game developer can decide to use the bounding boxes as observations instead of the visual features. A small encoder processes the observations to create inputs to the Policy and Critic networks, which are trained using the PPO algorithm. A small decoder transforms the Policy network's output into actions, which can be seen as the movement inputs typical of a video game controller.</p>
+          </h2>
+        </div>
+      </div>
+      <!--/ Training. -->
+    </div>
+
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <!-- Training. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-3">Blueprints</h2>
+              <img src="./static/images/blueprints.png"
+                    alt="Blueprints."/>
+                    <p>Our method is designed with the game developer in mind. All the visual inputs, backbone and RL network parameters, as well as the outputs and all the other parameters, are easily accessible through a GUI or Blueprint nodes, without the need for writing a single line of code.</p>
+
+                    <p><b>Left</b>: a set of Blueprint nodes managing the visual observations.</p>
+
+                    <p><b>Right</b>: a snippet of our GUI allowing the selection of the number of agents to be spawned, the desired backbone network architecture, as well as the visual input configuration (resolution, FOV, etc.).</p>
+
+              </h2>
+            </div>
+          </div>
+          <!--/ Training. -->
+        </div>
+
+
+        <section class="section">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <!-- Training. -->
+              <div class="column">
+                <div class="content">
+                  <h2 class="title is-3">Visual Results</h2>
+                  <img src="./static/images/results.png"
+                        alt="Visual Results."/>
+                        <p><i>Peek-a-bot</i> visual observations system applied to multiple dynamic and unbounded scenes.</p>
+
+                        <p><b>Top row</b>: different types of training scenarios (hide and seek, car race, urban navigation, drone coverage) and visual observation cones (blue).</p>
+
+                        <p><b>Bottom row</b>: corresponding visual observations to be encoded by the neural network into observation vectors. Our method allows us to manage different kinds of rich, dynamic scenes while dropping the need for different kinds of sensors for each scenario.</p>
+
+                  </h2>
+                </div>
+              </div>
+              <!--/ Training. -->
+            </div>
+
+    <!-- Related Links. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Here you can find some related links.
+          </p>
+          <p>
+            <a href="https://dev.epicgames.com/community/learning/courses/kRm/unreal-engine-learning-agents-5-4/4JPj/unreal-engine-learning-agents-intro-5-4">Unreal Engine's Learning Agents</a> allows us to setup the training environment and render all the scenes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Links. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>Coming soon
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
